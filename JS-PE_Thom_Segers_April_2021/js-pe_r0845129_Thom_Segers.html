@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>JS-PE_Thom_Segers</title>
+
+  <!-- Bootstrap core CSS -->
+  
+  <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  
+  
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 order-md-2 mb-4 mt-5">
+        <div class="alert alert-danger" id="Danger">
+          <h4 class="mt-2">Yikes, errors ...</h4>
+          <p id="Danger-p"></p>
+        </div>
+        <div class="alert alert-success" id="Success">
+          <h4 class="mt-2">Goed gedaan</h4>
+          <p id="Success-p">aww yeah, je werd geregistreerd.</p>
+        </div>
+        <div class="alert alert-info" id="Info">
+          <h4 class="mt-2">Betalingswijze</h4>
+          <p id="Info-p"></p>
+        </div>
+      </div>
+      <div class="col-md-8 order-md-1">
+        <h1 class="mt-5"> Registreer </h1>
+        <form class="needs-validation" id="myForm">
+        <p class="lead">Meld ja aan bij Anoroc Services, wij beschermen jouw software tegen malware!</p>
+          <div class="row g-3">
+            <div class="col-sm-6"> <!--Voornaam-->
+              <label for="Voornaam" class="col-form-label">Voornaam</label>
+              <input type="text" class="form-control" id="Voornaam" placeholder="Uw voornaam" norequired>
+              <div class="invalid-feedback">het veld voornaam is vereist</div>
+            </div>
+            <div class="col-sm-6"> <!--Achternaam-->
+              <label for="Achternaam" class="col-form-label ">Achternaam</label>
+              <input type="text" class="form-control" id="Achternaam" placeholder="Uw Achternaam" norequired>
+              <div class="invalid-feedback">het veld Achternaam is vereist</div>
+            </div>
+            <div class="col-sm-6"> <!--Gebruikersnaam-->
+              <label for="Gebruikersnaam" class="col-form-label">Gebruikersnaam</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="Gebruikersnaam" placeholder="u911236" norequired>
+              </div>
+            </div>
+            <div class="col-sm-6"> <!--E-mailadres-->
+              <label for="E-mailadres" class="col-form-label">E-mailadres</label>
+              <input type="text" class="form-control" id="E-mailadres" placeholder="mail@example.com" norequired>
+              <div class="invalid-feedback">het veld email is vereist</div>
+            </div>
+            <div class="col-sm-6"> <!--Wachtwoord-->
+              <label for="Wachtwoord" class="col-form-label">wachtwoord</label>
+              <input type="text" class="form-control" id="Wachtwoord" norequired>
+              <small class="text-muted">Je wachtwoord moet minstens 8 tekens lang zijn</small>
+              <div class="invalid-feedback">het veld Wachtwoord is vereist</div>
+            </div>
+            <div class="col-sm-6"> <!--Herhaal-Wachtwoord-->
+              <label for="HWachtwoord" class="col-form-label">Herhaal wachtwoord</label>
+              <input type="text" class="form-control" id="Herhaal-Wachtwoord" norequired>
+              <div class="invalid-feedback">het veld Herhaal Wachtwoord is vereist</div>
+            </div>
+            <div class="col-sm-12"> <!--Adres-->
+              <label for="Adres" class="col-form-label">Adres</label>
+              <input type="text" class="form-control" id="Adres" placeholder="Uw Adres en Huisnummer" norequired>
+              <div class="invalid-feedback">Adres is vereist</div>
+            </div>
+            <div class="col-sm-5"> <!--Land-->
+              <label for="Land" class="col-form-label">Land</label>
+              <Select class="custom-select d-block w-100" id="Land" norequired>
+                <option value>kies</option>
+                <option>Belgie</option>
+              </Select>
+            </div>
+            <div class="col-sm-4"> <!--Provincie-->
+              <label for="Provincie" class="col-form-label">Land</label>
+              <Select class="custom-select d-block w-100" id="Provincie" norequired>
+                <option value>Kies</option>
+                <option>Antwerpen</option>
+                <option>Oost-vlaanderen</option>
+                <option>West-vlaanderen</option>
+                <option>Vlaams-brabant</option>
+              </Select>
+              <div class="invalid-feedback">Provincie is vereist</div>
+            </div>
+            <div class="col-sm-3"> <!--Postcode-->
+              <label for="Postcode" class="col-form-label">Postcode</label>
+              <input type="text" class="form-control" id="Postcode" norequired>
+              <div class="invalid-feedback">Postcode is vereist</div>
+            </div>
+            <div class="col-sm-12"> <!--Line-->
+            <hr class="mb-4">
+            </div>
+            <div class="col-sm-8"> <!--Checkboxes-->
+            <h4 class="mb-4">Hou me op de hoogte</h4>
+            <div class="costum-control custom-checkbox"> <!--Nieuwsbrief-->
+              <input type="checkbox" class="custom-control-input" id="Nieuwsbrief">
+              <label class="custom-control-label" for="Nieuwsbrief">
+                Inschrijven voor onze nieuwsbrief.
+              </label>
+            </div>
+            <div class="costum-control custom-checkbox"> <!--Voorwaarden-->
+              <input type="checkbox" class="custom-control-input" id="Voorwaarden">
+              <label class="custom-control-label" for="Voorwaarden">
+                Ik ga akkoord met de algemene voorwaarden.
+              </label>
+            </div>
+            </div>
+            <div class="col-sm-3"> <!--Betalings wijze-->
+              <h4 class="mb-4">Betaling</h4>
+              <div class="costum-control custom-radio"> <!--Banking app-->
+                <input type="radio" name="Betaalingswijze" class="custom-control-input" id="Banking-app" checked required>
+                <label class="custom-control-label" for="Banking-app">
+                  Banking App
+                </label>
+              </div>
+              <div class="costum-control custom-radio"> <!--Overschrijving-->
+                <input type="radio" name="Betaalingswijze" class="custom-control-input" id="Overschrijving" required>
+                <label class="custom-control-label" for="Overschrijving">
+                  Overschrijving
+                </label>
+              </div>
+              <div class="costum-control custom-radio"> <!--Visa-->
+                <input type="radio" name="Betaalingswijze" class="custom-control-input" id="Visa" required>
+                <label class="custom-control-label" for="Visa">
+                  Visa card
+                </label>
+              </div>
+              <div class="costum-control custom-radio"> <!--Paypal-->
+                <input type="radio" name="Betaalingswijze" class="custom-control-input" id="Paypal" required>
+                <label class="custom-control-label" for="Paypal">
+                  Paypal
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-12"> <!--Line-->
+              <hr class="mb-4">
+            </div>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" id="Submit"> <!--Submit button-->
+              Wave your magic wand
+            </button>
+          </div>
+        </form>  
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="JS/Form_validate.js"></script>
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+
+</body>
+
+</html>
